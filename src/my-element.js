@@ -24,7 +24,7 @@ export class MyElement extends LitElement {
       /**
        * The name to say "Hello" to.
        */
-      name: {type: String},
+      name: {type: String,reflect: true},
 
       /**
        * The number of times the button has been clicked.
@@ -41,7 +41,7 @@ export class MyElement extends LitElement {
 
   render() {
     return html`
-      <h1>Hello, ${this.name}!</h1>
+      <h1>Hello, ${this.name} Welcome to lit element!</h1>
       <button @click=${this._onClick} part="button">
         Click Count: ${this.count}
       </button>
